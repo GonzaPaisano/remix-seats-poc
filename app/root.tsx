@@ -1,6 +1,7 @@
 import { cssBundleHref } from "@remix-run/css-bundle";
 import type { LinksFunction } from "@remix-run/node";
 import {
+  Link,
   Links,
   LiveReload,
   Meta,
@@ -22,7 +23,10 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body>
+      <body style={{ background: '#F1F1F1', maxWidth: 1000, margin: '0 auto', fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
+        <header style={{ padding: 10, borderBottom: '1px solid #ddd' }}>
+          <Link to='/' style={{ color: 'inherit', textDecoration: 'none' }} ><h1>Paisatickets</h1></Link>
+        </header>
         <Outlet />
         <ScrollRestoration />
         <Scripts />
